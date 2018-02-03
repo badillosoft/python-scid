@@ -2,6 +2,8 @@ import random
 
 f = open("experimento.csv", "w")
 
+f.write("t,T,PH,M\n")
+
 for t in range(0, 181, 5):
     T = random.uniform(60, 100)
     PH = random.uniform(-7, 7)
