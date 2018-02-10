@@ -1,0 +1,7 @@
+hola este pretende ser un texto en espaniol bastante grande, 
+o al menos lo suficiente para ser considerado una base de palabras
+ en espaniol para determinar la frecuencia de cada letra dentro de este 
+ texto, no se si esto tenga sentido, pero entre mas palabras, 
+ podremos obtener una frecuencia mas apegada a la realidad.
+
+ La similitud coseno es una medida de la similitud existente entre dos vectores en un espacio que posee un producto interior con el que se evalua el valor del coseno del angulo comprendido entre ellos. Esta funcion trigonometrica proporciona un valor igual a 1 si el angulo comprendido es cero, es decir si ambos vectores apuntan a un mismo lugar. Cualquier angulo existente entre los vectores, el coseno arrojaria un valor inferior a uno. Si los vectores fuesen ortogonales el coseno se anularia, y si apuntasen en sentido contrario su valor seria -1. De esta forma, el valor de esta metrica se encuentra entre -1 y 1, es decir en el intervalo cerrado [-1,1].

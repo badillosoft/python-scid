@@ -1,0 +1,106 @@
+	
+Similitud coseno
+
+La similitud coseno es una medida de la similitud existente entre dos vectores en un espacio que posee un producto interior con el que se evalúa el valor del coseno del ángulo comprendido entre ellos. Esta función trigonométrica proporciona un valor igual a 1 si el ángulo comprendido es cero, es decir si ambos vectores apuntan a un mismo lugar. Cualquier ángulo existente entre los vectores, el coseno arrojaría un valor inferior a uno. Si los vectores fuesen ortogonales el coseno se anularía, y si apuntasen en sentido contrario su valor sería -1. De esta forma, el valor de esta métrica se encuentra entre -1 y 1, es decir en el intervalo cerrado [-1,1].
+
+Esta distancia se emplea frecuentemente en la búsqueda y recuperación de información representando las palabras (o documento) en un espacio vectorial.1​ En minería de textos se aplica la similitud coseno con el objeto de establecer una métrica de semejanza entre textos.2​ En minería de datos se suele emplear como un indicador de cohesión de clusteres de textos. La similitud coseno no debe ser considerada como una métrica debido a que no cumple la desigualdad triangular.
+Similitud Coseno Suave
+
+El Coseno Suave3​ es una medida de similitud "suave" entre dos vectores, es decir, la medida considera la similitud entre pares de características. La similitud coseno tradicional considera que las características en el modelo espacio vectorial (MEV) son independientes o completamente diferentes, mientras que el coseno suave propone considerar la similitud de características en el MEV, lo cual permite la generalización de los conceptos de similitud coseno y también la idea de similitud (similitud suave).
+
+Por ejemplo, en el área de procesamiento de lenguaje natural (PLN) la similitud entre las características es bastante intuitiva. Las características tales como, palabras, n-gramas, n-gramas sintácticos4​ pueden ser muy similares, aunque formalmente son consideradas como características diferentes en el MEV. Por ejemplo, las palabras "play" y "game" (en inglés) son palabras diferentes y por lo tanto se mapean a dimensiones diferentes en el modelo de espacio vectorial; sin embargo, es obvio que estas palabras están relacionadas semánticamente. En el caso de n-gramas o n-gramas sintácticos se puede usar la distancia de Levenshtein para calcular la similitud entre características.
+
+Para el cálculo del coseno suave, se introduce la matriz s que contiene la similitud entre las características. Se puede calcular utilizando la distancia Levenshtein u otras medidas de similitud, por ejemplo, diversas medidas de similitud de WordNet. Luego solo se multiplica por esta matriz.
+
+Dado dos vectores a y b de dimensión N N, el coseno suave es calculado como sigue:
+
+    s o f t _ c o s i n e 1 ⁡ ( a , b ) = ∑ i , j N s i j a i b j ∑ i , j N s i j a i a j ∑ i , j N s i j b i b j , {\displaystyle {\begin{aligned}\operatorname {soft\_cosine} _{1}(a,b)={\frac {\sum \nolimits _{i,j}^{N}s_{ij}a_{i}b_{j}}{{\sqrt {\sum \nolimits _{i,j}^{N}s_{ij}a_{i}a_{j}}}{\sqrt {\sum \nolimits _{i,j}^{N}s_{ij}b_{i}b_{j}}}}},\end{aligned}}} {\displaystyle {\begin{aligned}\operatorname {soft\_cosine} _{1}(a,b)={\frac {\sum \nolimits _{i,j}^{N}s_{ij}a_{i}b_{j}}{{\sqrt {\sum \nolimits _{i,j}^{N}s_{ij}a_{i}a_{j}}}{\sqrt {\sum \nolimits _{i,j}^{N}s_{ij}b_{i}b_{j}}}}},\end{aligned}}}
+
+donde sij = similitud(característicai, característicaj).
+
+Si no existe similitud entre características (sii = 1, sij = 0 para i ≠ j), la ecuación dada es equivalente a la fórmula de similitud coseno convencional.
+
+La complejidad de esta medida es cuadrática, lo cual la hace completamente aplicable a problemas del mundo real. La complejidad incluso puede ser transformada a lineal.
+Referencia
+
+Singhal, Amit (2001). "Modern Information Retrieval: A Brief Overview". Bulletin of the IEEE Computer Society Technical Committee on Data Engineering 24 (4): 35–43.
+P.-N. Tan, M. Steinbach & V. Kumar, "Introduction to Data Mining", Addison-Wesley (2005), ISBN 0-321-32136-7, chapter 8; page 500.
+Sidorov, Grigori; Gelbukh, Alexander; Gómez-Adorno, Helena; Pinto, David. «Soft Similarity and Soft Cosine Measure: Similarity of Features in Vector Space Model». Computación y Sistemas 18 (3): 491-504. doi:10.13053/CyS-18-3-2043. Consultado el 7 de octubre de 2014.
+
+    Sidorov, Grigori; Velasquez, Francisco; Stamatatos, Efstathios; Gelbukh, Alexander; Chanona-Hernández, Liliana. Syntactic Dependency-based N-grams as Classification Features. LNAI 7630. pp. 1-11. ISBN 978-3-642-37798-3. Consultado el 7 de octubre de 2014.
+
+Categoría:
+
+    Recuperación de información
+
+Menú de navegación
+
+    No has accedido
+    Discusión
+    Contribuciones
+    Crear una cuenta
+    Acceder
+
+    Artículo
+    Discusión
+
+    Leer
+    Editar
+    Ver historial
+
+Buscar
+
+    Portada
+    Portal de la comunidad
+    Actualidad
+    Cambios recientes
+    Páginas nuevas
+    Página aleatoria
+    Ayuda
+    Donaciones
+    Notificar un error
+
+Imprimir/exportar
+
+    Crear un libro
+    Descargar como PDF
+    Versión para imprimir
+
+Herramientas
+
+    Lo que enlaza aquí
+    Cambios en enlazadas
+    Subir archivo
+    Páginas especiales
+    Enlace permanente
+    Información de la página
+    Elemento de Wikidata
+    Citar esta página
+
+En otros idiomas
+
+    Deutsch
+    English
+    Français
+    Italiano
+    한국어
+    Nederlands
+    Русский
+    中文
+
+Editar enlaces
+
+    Se editó esta página por última vez el 24 oct 2015 a las 11:25.
+    El texto está disponible bajo la Licencia Creative Commons Atribución Compartir Igual 3.0; pueden aplicarse cláusulas adicionales. Al usar este sitio, usted acepta nuestros términos de uso y nuestra política de privacidad.
+    Wikipedia® es una marca registrada de la Fundación Wikimedia, Inc., una organización sin ánimo de lucro.
+
+    Normativa de privacidad
+    Acerca de Wikipedia
+    Limitación de responsabilidad
+    Desarrolladores
+    Declaración de cookies
+    Versión para móviles
+
+    Wikimedia Foundation	
+    Powered by MediaWiki	
+
